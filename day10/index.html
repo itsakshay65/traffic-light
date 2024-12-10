@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Light Animation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="position: fixed; top: 0px;color: aliceblue;">traffic-light</h1>
+  <div class="traffic-light" onclick="changeLight()">
+    <div class="light red"></div>
+    <div class="light yellow"></div>
+    <div class="light green"></div>
+  </div>
+
+  <script>
+    let currentLight = 'red';
+
+function changeLight() {
+  // Reset all lights to off
+  document.querySelector('.red').style.backgroundColor = '#800000';
+  document.querySelector('.yellow').style.backgroundColor = '#a0a000';
+  document.querySelector('.green').style.backgroundColor = '#006400';
+  
+  // Change to the next color
+  if (currentLight === 'red') {
+    document.querySelector('.yellow').style.backgroundColor = '#ffff00';  // Yellow
+    currentLight = 'yellow';
+  } else if (currentLight === 'yellow') {
+    document.querySelector('.green').style.backgroundColor = '#00ff00';  // Green
+    currentLight = 'green';
+  } else {
+    document.querySelector('.red').style.backgroundColor = '#ff0000';  // Red
+    currentLight = 'red';
+  }
+}
+
+
+  </script>
+</body>
+</html>
+

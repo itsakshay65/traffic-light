@@ -1,0 +1,44 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #000000;
+   background-repeat: no-repeat;
+}
+  
+  .traffic-light {
+    width: 100px;
+    height: 250px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+  }
+  
+  .light {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: #333;
+    transition: background-color 0.5s ease;
+  }
+  
+  .red {
+    background-color: #f97777;
+  }
+  
+  .yellow {
+    background-color: #a0a000;
+  }
+  
+  .green {
+    background-color: #006400;
+  }
+  
